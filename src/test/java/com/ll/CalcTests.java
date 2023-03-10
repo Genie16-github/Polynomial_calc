@@ -35,4 +35,17 @@ public class CalcTests {
     void t5() {
         assertThat(Calc.run("50 - 30")).isEqualTo(20); // 구현
     }
+
+    @Test
+    @DisplayName("10 - 3 == 7")
+    void t6() {
+        assertThat(Calc.run("10 - 3")).isEqualTo(7); // 구현
+    }
+
+    @Test
+    @DisplayName("10 - 3 + 20 == 27")
+    void t7() {
+        assertThat(Calc.run("10 - 3 + 20")).isEqualTo(27); // 구현
+    }
+
 }
