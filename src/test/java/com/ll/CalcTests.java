@@ -48,4 +48,10 @@ public class CalcTests {
         assertThat(Calc.run("10 - 3 + 20")).isEqualTo(27); // 구현
     }
 
+    @Test
+    @DisplayName("10 - 3 + 20 - 10 + 10 + 20 == 47")
+    void t8() {
+        assertThat(Calc.run("10 - 3 + 20 - 10 + 10 + 20")).isEqualTo(47); // 구현
+    }
+
 }

@@ -14,12 +14,11 @@ class Calc{
 
         String[] bits = exp.split(" \\+ ");
 
-        int a = Integer.parseInt(bits[0]);
-        int b = Integer.parseInt(bits[1]);
-        int c = 0;
+        int sum = 0;
+        for (String bit : bits) {
+            sum += Integer.parseInt(bit);
+        }
 
-        if (bits.length > 2) c = Integer.parseInt(bits[2]);
-
-        return a + b + c;
+        return sum;
     }
 }
