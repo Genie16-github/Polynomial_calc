@@ -157,14 +157,20 @@ public class CalcTests {
     }
 
     @Test
-    @DisplayName("-(9 + 1) * -(8 + 2) == 100")
+    @DisplayName("-(8 + 2) * -(7 + 3) + 5 == 105")
     void t26() {
-        assertThat(Calc.run("-(9 + 1) * -(8 + 2)")).isEqualTo(100);
+        assertThat(Calc.run("-(8 + 2) * -(7 + 3) + 5")).isEqualTo(105);
     }
 
     @Test
-    @DisplayName("-(9 + 1) * -(8 + 2) + 5 == 100")
+    @DisplayName("5 - (1 + 5) == -1")
     void t27() {
-        assertThat(Calc.run("-(9 + 1) * -(8 + 2) + 5")).isEqualTo(105);
+        assertThat(Calc.run("5 - (1 + 5)")).isEqualTo(-1);
+    }
+
+    @Test
+    @DisplayName("3 * 1 + (1 - (4 * 1 - (1 - 1))) == 0")
+    void t28() {
+        assertThat(Calc.run("3 * 1 + (1 - (4 * 1 - (1 - 1)))")).isEqualTo(0);
     }
 }
